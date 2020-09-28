@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/index', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'FrontController@index');
+Route::get('/1', 'FrontController@news');
+Route::get('/2', 'FrontController@news_info');
+Route::get('/3', 'FrontController@contact_us');
+// Route::get('/4', 'FrontController@template');
