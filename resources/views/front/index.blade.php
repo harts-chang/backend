@@ -1,6 +1,12 @@
-@extends('layouts/template')
+{{-- laravel在執行和畫面相關的處理都會自動以views資料夾為根目錄 --}}
+@extends('layouts/nav_footer')
+
+@section('css')
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+@endsection
+
 @section('content')
-<main role="main">
     <section class="banner">
         <div class="swiper-container banner-container">
             <div class="swiper-wrapper">
@@ -32,23 +38,30 @@
     <section class="news">
         <div class="container">
             <h2 class="news_title">最新消息</h2>
+            {{ $news_list }}
             <div class="row news_lists">
+
+            @foreach ($news_list as $news)
                 <div class="col-md-4">
                     <div class="news_list">
-                        <h3>中台灣推薦秘境景點</h3>
-                        <h4>景點名稱</h4>
+                        <h3>{{$news->title}}</h3>
+                        <h4>{{$news->sub_tilte}}</h4>
                         <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
                         <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
-                        <a class="btn btn-success" href="./news_info.html" role="button">點擊查看更多 &raquo;</a>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+            @endforeach
+
+
+
+                {{-- <div class="col-md-4">
                     <div class="news_list">
                         <h3>東台灣推薦秘境景點</h3>
                         <h4>景點名稱</h4>
                         <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
                         <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
-                        <a class="btn btn-success" href="./news_info.html" role="button">點擊查看更多 &raquo;</a>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -57,13 +70,20 @@
                         <h4>景點名稱</h4>
                         <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
                         <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字</p>
-                       <a class="btn btn-success" href="./news_info.html" role="button">點擊查看更多 &raquo;</a>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
-    <hr>
-</main>
+@endsection
+{{-- 包在section中的資料要匯入到yield的位置 --}}
+
+@section('js')
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- page js -->
+    <script src="./js/index.js"></script>
 @endsection
 

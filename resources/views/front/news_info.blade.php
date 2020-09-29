@@ -1,6 +1,11 @@
-@extends('layouts/template')
+@extends('layouts/nav_footer')
+
+@section('css')
+    <link rel="stylesheet" href="./css/news_info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+@endsection
+
 @section('content')
-<main role="main">
     <section class="news_info">
         <div class="container">
             <h2 class="info_title">中台灣推薦秘境景點</h2>
@@ -22,14 +27,8 @@
             </div>
         </div>
     </section>
-    <hr>
-</main>
 @endsection
 
-@section('lightbox')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-@endsection
-
-@section('css')
-<link rel="stylesheet" href="./css/news_info.css">
+@section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 @endsection

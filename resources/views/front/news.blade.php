@@ -1,31 +1,123 @@
-@extends('layouts/template')
+@extends('layouts/nav_footer')
+
+@section('css')
+    <link rel="stylesheet" href="./css/news.css">
+@endsection
+
 @section('content')
-<main role="main">
-    <section class="news_info">
+    <section class="news">
         <div class="container">
-            <h2 class="info_title">中台灣推薦秘境景點</h2>
-            <div class="row">
-                <div class="col-12 my-3 my-md-0 col-md-6">
-                    <div class="image_box h-100">
-                        <a href="./images/index/news/news_example.JPG" data-lightbox="image-1" data-title="My caption">
-                            <img width="100%" src="./images/index/news/news_example.JPG" alt="">
-                        </a>
+            <h2 class="news_title">最新消息</h2>
+            <div class="row news_lists">
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>中台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
                     </div>
                 </div>
-                <div class="col-12 my-3 my-md-0 col-md-6">
-                    <div class="info_content">
-                        <h3>景點名稱</h3>
-                        我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容我是文章詳細內容
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>東台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
                     </div>
-
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>南台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字</p>
+                    <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>中台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>東台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>南台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字</p>
+                    <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>中台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>東台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>南台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字</p>
+                    <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>中台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>東台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字...</p>
+                        <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news_list">
+                        <h3>南台灣推薦秘境景點</h3>
+                        <h4>景點名稱</h4>
+                        <img width="100%" src="./images/index/news/news_example.JPG" alt="圖片建議尺寸: 1000 x 567">
+                        <p class="news_content">一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字</p>
+                    <a class="btn btn-success" href="/news_info" role="button">點擊查看更多 &raquo;</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <hr>
-</main>
-@endsection
-
-@section('css')
-<link rel="stylesheet" href="./css/news.css">
 @endsection

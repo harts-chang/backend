@@ -8,9 +8,8 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    @yield('lightbox')
+
+
     <!-- page css -->
     <link rel="stylesheet" href="./css/index.css">
     @yield('css')
@@ -29,13 +28,13 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">首頁</a>
+                    <a class="nav-link" href="/">首頁</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/news.html">最新消息</a>
+                    <a class="nav-link" href="/news">最新消息</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact_us.html">來信推薦</a>
+                    <a class="nav-link" href="/contact_us">來信推薦</a>
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
@@ -46,8 +45,8 @@
     </nav>
 
     <main role="main">
-        <!-- 內容放此 -->
         @yield('content')
+        {{-- php語法 將指定的資料匯入到這個位置 --}}
         <hr>
     </main>
 
@@ -65,11 +64,9 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <!-- swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    @yield('js')
 
-    <!-- page js -->
-    <script src="./js/index.js"></script>
+
 </body>
 
 </html>
